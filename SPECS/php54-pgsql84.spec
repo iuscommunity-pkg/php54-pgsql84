@@ -1,6 +1,6 @@
 %global php_base php54
 %global php_apiver  %((echo 0; php -i 2>/dev/null | sed -n 's/^PHP API => //p') | tail -1)
-%global php_ver 5.4.12
+%global php_ver 5.4.13
 %global php_basever 5.4
 
 Summary:        A PostgreSQL 8.4 database module for PHP        
@@ -99,8 +99,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Fri Mar 15 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.13-1.ius
+- Rebulding for php 5.4.13
+
 * Fri Feb 22 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.12-1.ius
-- Rebulding for php 5.4.11
+- Rebulding for php 5.4.12
 
 * Thu Jan 17 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.11-1.ius
 - Rebulding for php 5.4.11
