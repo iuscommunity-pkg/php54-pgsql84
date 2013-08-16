@@ -5,7 +5,7 @@
 
 Summary:        A PostgreSQL 8.4 database module for PHP        
 Name:           %{php_base}-pgsql84
-Version:        %{php_ver} 
+Version:        5.4.18
 Release:        1.ius%{?dist}
 Group:          Development/Languages
 License:        PHP 
@@ -99,6 +99,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Fri Aug 16 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.18-1.ius
+- Latest sources from upstream
+
 * Mon Jul 08 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.17-1.ius
 - Rebulding for php 5.4.17
 
