@@ -1,11 +1,11 @@
 %global php_base php54
 %global php_apiver  %((echo 0; php -i 2>/dev/null | sed -n 's/^PHP API => //p') | tail -1)
-%global php_ver 5.4.17
+%global php_ver 5.4.19
 %global php_basever 5.4
 
 Summary:        A PostgreSQL 8.4 database module for PHP        
 Name:           %{php_base}-pgsql84
-Version:        5.4.18
+Version:        %{php_ver}
 Release:        1.ius%{?dist}
 Group:          Development/Languages
 License:        PHP 
@@ -99,6 +99,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Fri Aug 23 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.19-1.ius
+- Latest sources from upstream
+
 * Fri Aug 16 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.18-1.ius
 - Latest sources from upstream
 
