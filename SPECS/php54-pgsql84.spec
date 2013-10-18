@@ -1,6 +1,6 @@
 %global php_base php54
 %global php_apiver  %((echo 0; php -i 2>/dev/null | sed -n 's/^PHP API => //p') | tail -1)
-%global php_ver 5.4.20
+%global php_ver 5.4.21
 %global php_basever 5.4
 
 Summary:        A PostgreSQL 8.4 database module for PHP        
@@ -99,6 +99,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Fri Oct 18 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.21-1.ius
+- Latest sources from upstream
+
 * Fri Sep 20 2013 Ben Harper <ben.harper@rackspace.com> - 5.4.20-1.ius
 - Latest sources from upstream
 
