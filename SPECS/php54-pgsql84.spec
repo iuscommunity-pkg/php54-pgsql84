@@ -1,5 +1,4 @@
 %global php_base php54
-%global php_apiver  %((echo 0; php -i 2>/dev/null | sed -n 's/^PHP API => //p') | tail -1)
 %global php_ver 5.4.36
 %global php_basever 5.4
 
@@ -20,7 +19,7 @@ BuildRequires: postgresql84-devel
 %endif
 BuildRequires: krb5-devel, openssl-devel
 BuildRequires: %{php_base} >= %{php_ver}, %{php_base}-devel
-Requires: %{php_base}-api = %{php_apiver}, %{php_base}-common, %{php_base}-pdo
+Requires: %{php_base}-pdo%{?_isa} >= %{version}
 
 Conflicts: %{php_base}-pgsql
 Conflicts: php-pgsql < %{php_basever}
