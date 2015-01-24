@@ -24,10 +24,14 @@ Requires: %{php_base}-pdo%{?_isa} >= %{version}
 Conflicts: %{php_base}-pgsql
 Conflicts: php-pgsql < %{php_basever}
 Conflicts: php-pdo-pgsql < %{php_basever}
-Provides: php-pgsql = %{version}-%{release}
+Provides: php-pgsql = %{version}-%{release}, php-pgsql%{?_isa} = %{version}-%{release}
 Provides: php-pdo-pgsql = %{version}-%{release}
 Provides: %{php_base}-pdo-pgsql = %{version}-%{release}
-Provides: php_database, php-pdo_pgsql
+Provides: php_database, %{php_base}_database
+Provides: php-pdo_pgsql, php-pdo_pgsql%{?_isa}
+Provides: %{php_base}-pdo_pgsql, %{php_base}-pdo_pgsql%{?_isa}
+Provides: config(php-pgsql) = %{version}-%{release}
+
 
 %description 
 The php-pgsql package includes a dynamic shared object (DSO) that can
