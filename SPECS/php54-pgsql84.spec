@@ -1,5 +1,5 @@
 %global php_base php54
-%global php_ver 5.4.36
+%global php_ver 5.4.37
 %global php_basever 5.4
 
 Summary: A PostgreSQL 8.4 database module for PHP
@@ -102,6 +102,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/php/modules/pdo_pgsql.so
 
 %changelog
+* Fri Jan 23 2015 Carl George <carl.george@rackspace.com> - 5.4.37-1.ius
+- Add missing provides
+- Remove redundant requirements
+- Latest upstream
+
 * Fri Dec 19 2014 Ben Harper <ben.harper@rackspace.com> - 5.4.36-1.ius
 - Latest sources from upstream
 
