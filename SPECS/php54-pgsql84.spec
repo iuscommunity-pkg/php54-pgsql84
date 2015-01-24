@@ -3,32 +3,32 @@
 %global php_ver 5.4.36
 %global php_basever 5.4
 
-Summary:        A PostgreSQL 8.4 database module for PHP        
-Name:           %{php_base}-pgsql84
-Version:        %{php_ver}
-Release:        1.ius%{?dist}
-Group:          Development/Languages
-License:        PHP 
-URL:            http://php.net
-Source0:        http://www.php.net/distributions/php-%{php_ver}.tar.gz       
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Summary: A PostgreSQL 8.4 database module for PHP
+Name: %{php_base}-pgsql84
+Version: %{php_ver}
+Release: 1.ius%{?dist}
+Group: Development/Languages
+License: PHP
+URL: http://php.net
+Source0: http://www.php.net/distributions/php-%{php_ver}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 %if 0%{?fedora} >= 11 || 0%{?rhel} >= 6
 BuildRequires: postgresql-devel >= 8.4
 %else
 BuildRequires: postgresql84-devel
 %endif
-BuildRequires:  krb5-devel, openssl-devel
-BuildRequires:  %{php_base} >= %{php_ver}, %{php_base}-devel
-Requires:       %{php_base}-api = %{php_apiver}, %{php_base}-common, %{php_base}-pdo 
+BuildRequires: krb5-devel, openssl-devel
+BuildRequires: %{php_base} >= %{php_ver}, %{php_base}-devel
+Requires: %{php_base}-api = %{php_apiver}, %{php_base}-common, %{php_base}-pdo
 
-Conflicts:      %{php_base}-pgsql
-Conflicts:      php-pgsql < %{php_basever}
-Conflicts:      php-pdo-pgsql < %{php_basever}
-Provides:       php-pgsql = %{version}-%{release}
-Provides:       php-pdo-pgsql = %{version}-%{release}
-Provides:       %{php_base}-pdo-pgsql = %{version}-%{release}
-Provides:       php_database, php-pdo_pgsql 
+Conflicts: %{php_base}-pgsql
+Conflicts: php-pgsql < %{php_basever}
+Conflicts: php-pdo-pgsql < %{php_basever}
+Provides: php-pgsql = %{version}-%{release}
+Provides: php-pdo-pgsql = %{version}-%{release}
+Provides: %{php_base}-pdo-pgsql = %{version}-%{release}
+Provides: php_database, php-pdo_pgsql
 
 %description 
 The php-pgsql package includes a dynamic shared object (DSO) that can
