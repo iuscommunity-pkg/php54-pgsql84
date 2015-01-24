@@ -18,7 +18,7 @@ BuildRequires: postgresql-devel >= 8.4
 BuildRequires: postgresql84-devel
 %endif
 BuildRequires: krb5-devel, openssl-devel
-BuildRequires: %{php_base} >= %{php_ver}, %{php_base}-devel
+BuildRequires: %{php_base}-devel >= %{php_ver}
 Requires: %{php_base}-pdo%{?_isa} >= %{version}
 
 Conflicts: %{php_base}-pgsql
